@@ -13,3 +13,11 @@
   color: rgb(139, 138, 138);  
   font-size: 0.9rem;
 }
+
+.temperature-weather-condition-details {
+  margin-top: 2rem;
+}
+
+.temperature-weather-condition-details > * {
+  margin: 0;
+}

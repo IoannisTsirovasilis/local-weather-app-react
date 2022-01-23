@@ -1,6 +1,8 @@
 import DayHeader from '../day-header/day-header';
 import DateDetails from '../date-details/date-details';
 import LocationDetails from '../location-details/location-details';
+import TemperatureHeader from '../temperature-header/temperature-header';
+import WeatherConditionDetails from '../weather-condition-details/weather-condition-details';
 import constants from '../../common/constants';
 import './daily-weather-container.css'
 
@@ -19,6 +21,10 @@ function DailyWeatherContainer() {
       <DateDetails />
       <span>&nbsp;</span>
       <LocationDetails />
+    </div>
+    <div className='temperature-weather-condition-details'>
+      <TemperatureHeader />
+      <WeatherConditionDetails />
     </div>
   </div>;
 }
