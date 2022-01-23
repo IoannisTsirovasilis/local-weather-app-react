@@ -1,6 +1,7 @@
 import WeekdayWeather from '../weekday-weather/weekday-weather';
 import './weekdays-weather-container.css';
 import constants from '../../common/constants';
+import React from 'react';
 
 const weatherConditionIcons = {
   SUNNY: 'fas fa-sun',
@@ -27,13 +28,16 @@ function getRandomTemperature() {
   return Math.floor(Math.random() * 40) + 20;
 }
 
-function WeekdaysWeatherContainer() {
-  const weekdaysWeather = Object.values(constants.WEEKDAYS).map((day, index) => {
-    const randomWeatherCondition = getRandomWeatherConditionKey();
-    const randomTemperature = getRandomTemperature();
-    return <WeekdayWeather key={index} icon={weatherConditionIcons[randomWeatherCondition]} day={day.short} temperature={randomTemperature} />;
-  });
-  return <div className="weekdays-weather-container">{weekdaysWeather}</div>;
+class WeekdaysWeatherContainer extends React.Component {
+  render() {
+    const weekdaysWeather = Object.values(constants.WEEKDAYS).map((day, index) => {
+      const randomWeatherCondition = getRandomWeatherConditionKey();
+      const randomTemperature = getRandomTemperature();
+      return <WeekdayWeather key={index} icon={weatherConditionIcons[randomWeatherCondition]} day={day.short} temperature={randomTemperature} />;
+    });
+    return <div className="weekdays-weather-container">{weekdaysWeather}</div>;
+  }
+  
 }
 
 export default WeekdaysWeatherContainer;

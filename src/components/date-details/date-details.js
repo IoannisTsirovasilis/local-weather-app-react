@@ -1,3 +1,4 @@
+import React from 'react';
 import constants from '../../common/constants';
 import './date-details.css'
 
@@ -10,12 +11,14 @@ function getFullDate() {
   return dayOfMonth + ' ' + Object.values(constants.MONTHS).find((m) => m.index === monthIndex).long + ', ' + year;
 }
 
-function DateDetails () {
-  return (
-    <div className='date-details'>
-      {getFullDate()}
-    </div>
-  );
+class DateDetails extends React.Component {
+  render() {
+    return (
+      <div className='date-details'>
+        {getFullDate()}
+      </div>
+    );
+  }
 }
 
 export default DateDetails;

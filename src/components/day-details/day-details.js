@@ -1,7 +1,11 @@
+import React from "react";
 import './day-details.css'
 
-function DayDetails(props) {
-  return <div className='day-details'>{props.day}</div>
+class DayDetails extends React.Component {
+  render() {
+    return <div className='day-details'>{this.props.day}</div>
+  }
+  
 }
 
 export default DayDetails;
