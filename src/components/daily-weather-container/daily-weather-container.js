@@ -1,6 +1,6 @@
 import DayDetails from '../day-details/day-details';
 import DateLocationDetails from '../date-location-details/date-location-details';
-import TemperatureHeader from '../temperature-header/temperature-header';
+import TemperatureDetails from '../temperature-details/temperature-details';
 import WeatherConditionDetails from '../weather-condition-details/weather-condition-details';
 import constants from '../../common/constants';
 // TODO: Move images to an online service
@@ -24,7 +24,7 @@ function DailyWeatherContainer() {
     <DayDetails day={getTodayLongName()} />
     <DateLocationDetails />
     <div className='temperature-weather-condition-details'>
-      <TemperatureHeader />
+      <TemperatureDetails />
       <WeatherConditionDetails />
     </div>
   </div>;
