@@ -9,7 +9,6 @@
 .date-location-details {
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
   color: rgb(139, 138, 138);  
   font-size: 0.9rem;
 }
