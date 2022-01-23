@@ -1,0 +1,10 @@
+.date-location-details {
+  display: flex;
+  flex-direction: row;
+  color: rgb(139, 138, 138);  
+  font-size: 0.9rem;
+}
+
+.date-location-details-separator {
+  margin: 0 0.5rem;
+}

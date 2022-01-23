@@ -1,4 +1,5 @@
 import constants from '../../common/constants';
+import './date-details.css'
 
 // TODO: This should be calculated real-time
 function getFullDate() {
@@ -11,7 +12,7 @@ function getFullDate() {
 
 function DateDetails () {
   return (
-    <div>
+    <div className='date-details'>
       {getFullDate()}
     </div>
   );
