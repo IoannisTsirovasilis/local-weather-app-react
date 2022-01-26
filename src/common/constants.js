@@ -55,16 +55,28 @@ const WEATHER_CONDITION_ICON_MAP = {
 
 const UNKNOWN_WEATHER_CONDITION = 'Unknown';
 
+const UNKNOWN_LOCAL_AREA_NAME = 'Unknown';
+
 const STORE_ACTION_TYPES = {
   WeatherApiSuccess: 'weather-api/success',
+  GeocodeApiSuccess: 'geocode-api/success',
 }
 
 const ERROR_TO_ACTION_TYPE_MAP = {
   UnableToGetLocationError: 'location/error',
-  UnableToGetWeatherError: 'weather/error'
+  UnableToGetWeatherError: 'weather/error',
+  UnableToGetLocalAreaNameError: 'local-area-name/error',
 }
 
-
-const constants = { WEEKDAYS, MONTHS, WEATHER_CONDITION_ICON_MAP, WEATHER_API_TO_WEATHER_CONDITION_MAP, UNKNOWN_WEATHER_CONDITION, STORE_ACTION_TYPES, ERROR_TO_ACTION_TYPE_MAP };
+const constants = { 
+  WEEKDAYS, 
+  MONTHS, 
+  WEATHER_CONDITION_ICON_MAP, 
+  WEATHER_API_TO_WEATHER_CONDITION_MAP, 
+  UNKNOWN_WEATHER_CONDITION, 
+  STORE_ACTION_TYPES, 
+  ERROR_TO_ACTION_TYPE_MAP, 
+  UNKNOWN_LOCAL_AREA_NAME 
+};
 
 export default constants;

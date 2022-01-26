@@ -12,6 +12,7 @@ const actionsMap = {
     const weekdays = filterOutTodayFromWeekdays(action.payload.daily);
 
     const newState = {
+      ...state,
       weather: {
         current: {
           temperature: utils.convertKelvinToCelsius(action.payload.current.temp),
@@ -28,8 +29,15 @@ const actionsMap = {
     };
     return newState;
   },
+  [constants.STORE_ACTION_TYPES.GeocodeApiSuccess]: (state, action) => {
+    return {
+      ...state,
+      localAreaName: action.payload
+    }
+  },
   [constants.ERROR_TO_ACTION_TYPE_MAP.UnableToGetLocationError]: () => defaultState,
-  [constants.ERROR_TO_ACTION_TYPE_MAP.UnableToGetWeatherError]: () => defaultState
+  [constants.ERROR_TO_ACTION_TYPE_MAP.UnableToGetWeatherError]: () => defaultState,
+  [constants.ERROR_TO_ACTION_TYPE_MAP.UnableToGetLocalAreaNameError]: () => defaultState,
 }
 
 export default function appReducer(state = defaultState, action) {

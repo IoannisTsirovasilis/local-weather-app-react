@@ -4,7 +4,7 @@ import UnableToGetWeatherError from "../common/errors/unable-to-get-weather-erro
 
 export async function getWeather({ lat, lon }) {
   try {
-    const response = await axios.get(`${process.env.REACT_APP_WEATHER_API_URL}/weather-app?lat=${lat}&lon=${lon}`);
+    const response = await axios.get(`${process.env.REACT_APP_GOOGLE_CLOUD_FUNCTIONS_URL}/weather-app?lat=${lat}&lon=${lon}`);
     const data = {
       ...response.data
     }

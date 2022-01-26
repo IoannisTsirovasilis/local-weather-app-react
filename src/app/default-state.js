@@ -1,6 +1,7 @@
 import constants from '../common/constants';
 
 const defaultState = {
+  localAreaName: constants.UNKNOWN_LOCAL_AREA_NAME,
   weather: {
     current: {
       temperature: 0,
