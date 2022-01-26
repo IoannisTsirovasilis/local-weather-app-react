@@ -23,7 +23,7 @@ const MONTHS = {
   DECEMBER: { long: 'December', short: 'Dec', index: 11 },
 };
 
-const OPEN_WEATHER_API_WEATHER_CONDITION_MAP = {
+const WEATHER_API_TO_WEATHER_CONDITION_MAP = {
   Clouds: 'Clouds',
   Thunderstorm: 'Thunder',
   Drizzle: 'Drizzle',
@@ -55,6 +55,6 @@ const WEATHER_CONDITION_ICON_MAP = {
 
 const UNKNOWN_WEATHER_CONDITION = 'Unknown';
 
-const constants = { WEEKDAYS, MONTHS, WEATHER_CONDITION_ICON_MAP, OPEN_WEATHER_API_WEATHER_CONDITION_MAP, UNKNOWN_WEATHER_CONDITION };
+const constants = { WEEKDAYS, MONTHS, WEATHER_CONDITION_ICON_MAP, WEATHER_API_TO_WEATHER_CONDITION_MAP, UNKNOWN_WEATHER_CONDITION };
 
 export default constants;

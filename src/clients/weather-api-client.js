@@ -12,9 +12,9 @@ export async function fetchWeather(dispatch) {
       ...response.data
     }
 
-    data.current.weather[0].main = constants.OPEN_WEATHER_API_WEATHER_CONDITION_MAP[data.current.weather[0].main];
+    data.current.weather[0].main = constants.WEATHER_API_TO_WEATHER_CONDITION_MAP[data.current.weather[0].main];
     data.daily.forEach(day => {
-      day.weather[0].main = constants.OPEN_WEATHER_API_WEATHER_CONDITION_MAP[day.weather[0].main];
+      day.weather[0].main = constants.WEATHER_API_TO_WEATHER_CONDITION_MAP[day.weather[0].main];
     }); 
     dispatch({ type: 'weather-api/success', payload: data }) 
   } catch (error) {
