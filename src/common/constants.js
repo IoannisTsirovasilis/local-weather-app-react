@@ -46,7 +46,6 @@ const WEATHER_CONDITION_ICON_MAP = {
   Rain: 'fas fa-cloud-rain',
   Clouds: 'fas fa-cloud',
   Snow: 'fas fa-snowflake',
-  Windy: 'fas fa-wind',
   Fog: 'fas fa-smog',
   Thunder: 'fas fa-bolt',
   Drizzle: 'fas fa-cloud-showers-heavy',
@@ -68,6 +67,17 @@ const ERROR_TO_ACTION_TYPE_MAP = {
   UnableToGetLocalAreaNameError: 'local-area-name/error',
 }
 
+const WEATHER_IMAGES_NAMES = {
+  Sunny: 'sunny',
+  Rain: 'rain',
+  Clouds: 'clouds',
+  Snow: 'snow',
+  Fog: 'fog',
+  Thunder: 'thunder',
+  Drizzle: 'drizzle',
+  Unknown: 'unknown'
+}
+
 const constants = { 
   WEEKDAYS, 
   MONTHS, 
@@ -76,7 +86,8 @@ const constants = {
   UNKNOWN_WEATHER_CONDITION, 
   STORE_ACTION_TYPES, 
   ERROR_TO_ACTION_TYPE_MAP, 
-  UNKNOWN_LOCAL_AREA_NAME 
+  UNKNOWN_LOCAL_AREA_NAME,
+  WEATHER_IMAGES_NAMES
 };
 
 export default constants;
