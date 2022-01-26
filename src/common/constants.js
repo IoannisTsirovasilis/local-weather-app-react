@@ -23,6 +23,38 @@ const MONTHS = {
   DECEMBER: { long: 'December', short: 'Dec', index: 11 },
 };
 
-const constants = { WEEKDAYS, MONTHS };
+const OPEN_WEATHER_API_WEATHER_CONDITION_MAP = {
+  Clouds: 'Clouds',
+  Thunderstorm: 'Thunder',
+  Drizzle: 'Drizzle',
+  Rain: 'Rain',
+  Snow: 'Snow',
+  Clear: 'Sunny',
+  Haze: 'Fog',
+  Mist: 'Fog',
+  Dust: 'Fog',
+  Smoke: 'Fog',
+  Fog: 'Fog',
+  Sand: 'Fog',
+  Ash: 'Fog',
+  Squall: 'Fog',
+  Tornado: 'Fog',
+}
+
+const WEATHER_CONDITION_ICON_MAP = {
+  Sunny: 'fas fa-sun',
+  Rain: 'fas fa-cloud-rain',
+  Clouds: 'fas fa-cloud',
+  Snow: 'fas fa-snowflake',
+  Windy: 'fas fa-wind',
+  Fog: 'fas fa-smog',
+  Thunder: 'fas fa-bolt',
+  Drizzle: 'fas fa-cloud-showers-heavy',
+  Unknown: 'fas fa-question'
+};
+
+const UNKNOWN_WEATHER_CONDITION = 'Unknown';
+
+const constants = { WEEKDAYS, MONTHS, WEATHER_CONDITION_ICON_MAP, OPEN_WEATHER_API_WEATHER_CONDITION_MAP, UNKNOWN_WEATHER_CONDITION };
 
 export default constants;
