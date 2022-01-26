@@ -55,6 +55,16 @@ const WEATHER_CONDITION_ICON_MAP = {
 
 const UNKNOWN_WEATHER_CONDITION = 'Unknown';
 
-const constants = { WEEKDAYS, MONTHS, WEATHER_CONDITION_ICON_MAP, WEATHER_API_TO_WEATHER_CONDITION_MAP, UNKNOWN_WEATHER_CONDITION };
+const STORE_ACTION_TYPES = {
+  WeatherApiSuccess: 'weather-api/success',
+}
+
+const ERROR_TO_ACTION_TYPE_MAP = {
+  UnableToGetLocationError: 'location/error',
+  UnableToGetWeatherError: 'weather/error'
+}
+
+
+const constants = { WEEKDAYS, MONTHS, WEATHER_CONDITION_ICON_MAP, WEATHER_API_TO_WEATHER_CONDITION_MAP, UNKNOWN_WEATHER_CONDITION, STORE_ACTION_TYPES, ERROR_TO_ACTION_TYPE_MAP };
 
 export default constants;

@@ -1,5 +1,6 @@
 import utils from '../common/utils';
 import defaultState from '../app/default-state';
+import constants from '../common/constants';
 
 
 function filterTodayFromWeekdays(weekdays) {
@@ -7,7 +8,7 @@ function filterTodayFromWeekdays(weekdays) {
 }
 
 const actionsMap = {
-  'weather-api/success': (state, action) => {
+  [constants.STORE_ACTION_TYPES.WeatherApiSuccess]: (state, action) => {
     const weekdays = filterTodayFromWeekdays(action.payload.daily);
 
     const newState = {
@@ -27,7 +28,8 @@ const actionsMap = {
     };
     return newState;
   },
-  'weather-api/error': () => defaultState
+  [constants.ERROR_TO_ACTION_TYPE_MAP.UnableToGetLocationError]: () => defaultState,
+  [constants.ERROR_TO_ACTION_TYPE_MAP.UnableToGetWeatherError]: () => defaultState
 }
 
 export default function appReducer(state = defaultState, action) {
