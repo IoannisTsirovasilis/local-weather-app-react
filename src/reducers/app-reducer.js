@@ -3,13 +3,13 @@ import defaultState from '../app/default-state';
 import constants from '../common/constants';
 
 
-function filterTodayFromWeekdays(weekdays) {
+function filterOutTodayFromWeekdays(weekdays) {
   return weekdays.filter((day) => utils.getDayByTimestamp(day.dt).index !== utils.getTodayIndex())
 }
 
 const actionsMap = {
   [constants.STORE_ACTION_TYPES.WeatherApiSuccess]: (state, action) => {
-    const weekdays = filterTodayFromWeekdays(action.payload.daily);
+    const weekdays = filterOutTodayFromWeekdays(action.payload.daily);
 
     const newState = {
       weather: {
