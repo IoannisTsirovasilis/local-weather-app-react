@@ -1,8 +1,11 @@
-import './temperature-details.css'
+import { useSelector } from 'react-redux';
+import './temperature-details.css';
 
 // TODO: Get temperature from a weather API
 function TemperatureDetails() {
-  return <div className="temperature-details">32 &#176;C</div>
+  const temperature = useSelector((state) => state.weather.current.temperature);
+  return <div className="temperature-details">{temperature} &#176;C</div>;
+  
 }
 
 export default TemperatureDetails;

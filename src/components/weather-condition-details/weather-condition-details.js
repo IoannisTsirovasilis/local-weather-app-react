@@ -1,8 +1,9 @@
+import { useSelector } from 'react-redux';
 import './weather-condition-details.css';
 
 function WeatherConditionDetails() {
-  // TODO: Get weather condition details from a weather API
-  return <div className="weather-condition-details">Cloudy</div>
+  const condition = useSelector((state) => state.weather.current.condition);
+  return <div className="weather-condition-details">{condition}</div>
 }
 
 export default WeatherConditionDetails;
