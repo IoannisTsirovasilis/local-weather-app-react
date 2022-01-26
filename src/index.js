@@ -6,9 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
 import store from './app/store'
 
-import { fetchWeather } from './clients/weather-api-client'
+import { getWeather } from './clients/weather-api-client'
 
-store.dispatch(fetchWeather)
+store.dispatch(getWeather)
 
 ReactDOM.render(
   <Provider store={store}>

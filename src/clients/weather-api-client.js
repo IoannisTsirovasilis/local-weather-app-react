@@ -5,7 +5,7 @@ import constants from "../common/constants"
 const lat = 38.012630;
 const lon = 23.820551;
 
-export async function fetchWeather(dispatch) {
+export async function getWeather(dispatch) {
   try {
     const response = await axios.get(`${process.env.REACT_APP_WEATHER_API_URL}/weather-app?lat=${lat}&lon=${lon}`);
     const data = {
